@@ -167,16 +167,6 @@ npm run dev                        # open http://localhost:5173
 
 ---
 
-## Deploy on Render
-1. Push this repository to GitHub.
-2. On [render.com](https://render.com), choose **New → Blueprint** and select the repository. Render reads `render.yaml` and creates the database, the ML service and the web app.
-3. Enter `ADMIN_EMAIL` and `ADMIN_PASSWORD` when asked, then wait for the build to finish.
-4. Optional: load the demo data from the web service's **Shell** with `cd server && node src/db/seed-demo.js`.
-
-Free instances sleep after 15 minutes idle and take about a minute to wake.
-
----
-
 ## Tests
 ```bash
 cd server && npm test              # needs a database named mentora_test
@@ -193,22 +183,3 @@ The API tests run real HTTP requests against a PostgreSQL test database. They co
 - the ML-down fallback
 
 The ML tests check model accuracy, risk ordering and K-Means segmentation.
-
----
-
-## Roadmap
-- [ ] Pilot with real students (on-time rate before vs after)
-- [ ] Email verification and password reset
-- [ ] Calendar sync and deadline reminders
-- [ ] Quiz and flashcard generation from notes
-- [ ] Spaced-repetition revision scheduling
-- [ ] Installable mobile app (PWA)
-
----
-
-## Team
-Built as a **PBL-III** project, B.Tech CSE (AI & ML), **Manipal University Jaipur**.
-
-- **Aahana Roy**
-- **Lavanya Agnihotri**
-- Guide: **Dr. Shinnu Jangra**
